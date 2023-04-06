@@ -30,7 +30,7 @@ function clock(){
     
     timer=setInterval(function(){
         timerCount--;
-        timerElement.textContent=timerCount;
+        timerEl.textContent=timerCount;
         if(timerCount>=0){
             if(isCorrect && timerCount> 0){
                 clearInterval(timer);
@@ -44,12 +44,16 @@ function clock(){
     },1000)
 };
 
+//When start button clicked, timer starts, and a question shows
+startButton.addEventListener("click", startGame);
+
 
 function startGame(){
+    timerCount=60
+    clock();
     
-    timerCount = 60;
-}
 
+}
 
 
 //get id "questions" element to insert questions into it.
@@ -57,8 +61,7 @@ function startGame(){
 
 
 
-//When start button clicked, timer starts, and a question shows
-startButton.addEventListener("click", startGame);
+
 
 
 //When a question is answered, a different question shows 
@@ -67,4 +70,14 @@ startButton.addEventListener("click", startGame);
 
 //When all questions are answered OR when the time reaches 0, show game over screen and score.
 
-//With game over screen, an option to write intitals should show and submit score should show.
+//With game over screen, an option to write intitals should show and submit score should show.  questions: 'Here is a question',
+        questions ={
+            questionsEl: "what is 1+7?",
+            answer:[
+                {text:"8", isCorrect:true},
+                {text:"5", isCorrect:false},
+                {text:"3", isCorrect:false},
+                {text:"2", isCorrect:false}
+
+            ]
+        }

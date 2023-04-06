@@ -1,0 +1,21 @@
+.quiz-area{
+    background-color: aquamarine;
+    padding: 15px;
+    border-color: lightcoral;
+    border-style: groove;
+    border-radius: 10px;
+}
+
+#start{
+    padding: 5px;
+}
+
+.btn{
+    padding: 5px;
+    background-color: lightcoral;
+}
+
+
+.hide{
+    display: none;
+}
